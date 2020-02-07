@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ViewSchedule">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#f50057">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_back"
+            />
+        <TextView
+            android:layout_marginLeft="42dp"
+            android:layout_marginTop="17dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Schedules"
+            android:fontFamily="@font/elegance"
+            android:textStyle="bold"
+            android:textColor="#FBFCFC"
+            android:textSize="23dp"
+            />
+
+
+    </androidx.appcompat.widget.Toolbar>
+    <View
+        android:id="@+id/toolBarShadow"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/toolbar_shadow"
+        android:layout_marginTop="0dp"
+        android:layout_below="@+id/toolBar"/>
+
+
+    <TextView
+        android:id="@+id/noSchedule"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="No Schedule ! \nGo Back to add some :)"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/toolBarShadow"
+        android:gravity="center"
+        android:fontFamily="@font/elegance"
+        />
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolBarShadow"
+        android:divider="@null"
+        android:dividerHeight="0dp"/>
+    <me.ibrahimsn.lib.CirclesLoadingView
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:circleRadius="8dp"
+        app:circleMargin="8dp"
+        app:animDistance="10dp"
+        app:animDuration="500"
+        app:animDelay="150"
+        app:animInterpolator="accelerateDecelerate"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+</RelativeLayout>

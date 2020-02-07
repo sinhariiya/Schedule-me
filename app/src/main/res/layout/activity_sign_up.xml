@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUp"
+    android:background="#F4F6F7"
+    android:gravity="center_vertical"
+    >
+
+
+
+    <TextView
+        android:id="@+id/textSignup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create"
+        android:textSize="41dp"
+        android:textStyle="bold"
+        android:fontFamily="@font/prestij_normal"
+        android:textColor="#f50057"
+        android:layout_marginLeft="56dp"
+
+        />
+    <TextView
+        android:id="@+id/textSignup2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Account !"
+        android:textSize="41dp"
+        android:fontFamily="@font/prestij_normal"
+        android:textColor="#5C546A"
+        android:layout_marginLeft="60dp"
+        android:layout_marginBottom="30dp"
+        android:layout_below="@+id/textSignup"
+        />
+
+
+
+        <EditText
+            android:id="@+id/editTextName"
+            android:layout_width="290dp"
+            android:layout_height="50dp"
+            android:background="@drawable/style_edittext"
+            android:drawableLeft="@drawable/ic_person"
+            android:hint="Enter Name"
+            android:paddingLeft="10dp"
+            android:drawablePadding="10dp"
+            android:layout_marginTop="20dp"
+           android:layout_below="@+id/textSignup2"
+            android:layout_centerHorizontal="true"
+            />
+
+        <EditText
+            android:id="@+id/editTextEmail"
+            android:layout_width="290dp"
+            android:layout_height="50dp"
+            android:background="@drawable/style_edittext"
+            android:drawableLeft="@drawable/ic_mail"
+            android:hint="Enter Email"
+            android:paddingLeft="10dp"
+            android:drawablePadding="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/editTextName"
+            android:layout_centerHorizontal="true"
+            />
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="290dp"
+            android:layout_height="50dp"
+            android:background="@drawable/style_edittext"
+            android:hint="Enter Password"
+            android:drawableLeft="@drawable/ic_password"
+            android:paddingLeft="10dp"
+            android:drawablePadding="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/editTextEmail"
+            android:layout_centerHorizontal="true"
+
+            />
+        <EditText
+            android:id="@+id/editTextConfirmPassword"
+            android:layout_width="290dp"
+            android:layout_height="50dp"
+            android:background="@drawable/style_edittext"
+            android:drawableLeft="@drawable/ic_password"
+            android:hint="Confirm Password"
+            android:paddingLeft="10dp"
+            android:drawablePadding="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/editTextPassword"
+            android:layout_centerHorizontal="true"
+            />
+        <Button
+            android:id="@+id/signupButton"
+            android:layout_width="290dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:text="SIGN UP"
+
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:textColor="#ECF0F1"
+
+            android:background="@drawable/round_button"
+            android:layout_below="@+id/editTextConfirmPassword"
+            android:layout_centerHorizontal="true"
+
+            />
+        <TextView
+            android:id="@+id/gotoLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already Registered ! Sign in Here"
+            android:textSize="14dp"
+            android:fontFamily="@font/elegance"
+            android:textColor="#f50057"
+            android:textStyle="bold"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/signupButton"
+            android:layout_centerHorizontal="true"
+            />
+    <me.ibrahimsn.lib.CirclesLoadingView
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:circleRadius="8dp"
+        app:circleMargin="8dp"
+        app:animDistance="10dp"
+        app:animDuration="500"
+        app:animDelay="150"
+        android:layout_below="@+id/gotoLogin"
+
+        app:animInterpolator="accelerateDecelerate"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+
+
+
+</RelativeLayout>
+

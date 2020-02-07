@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Schedule Me</string>
+    <string name="hint"><font size="200dp">Hint!</font></string>
+</resources>

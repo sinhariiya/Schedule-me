@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+  <RelativeLayout
+      android:id="@+id/toolBar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="#f50057"
+
+
+      >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:layout_centerVertical="true"
+        android:layout_marginLeft="70dp"
+        android:layout_marginBottom="23dp"
+
+
+        >
+
+
+      <ImageView
+          android:id="@+id/imageEdit"
+          android:layout_width="30dp"
+          android:layout_height="30dp"
+          android:src="@drawable/ic_iconedit"
+          />
+
+    <TextView
+        android:id="@+id/updateTitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit Meeting"
+        android:textSize="20dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/elegance"
+        android:textColor="#fafafa"
+        android:textStyle="bold"
+        />
+    </LinearLayout>
+  </RelativeLayout>
+
+
+    <EditText
+        android:id="@+id/updateTitle"
+        android:layout_width="260dp"
+        android:layout_height="50dp"
+        android:background="@drawable/style_edittext"
+        android:hint="Update schedule title"
+        android:padding="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/toolBar"
+        android:layout_marginTop="10dp"/>
+    <EditText
+        android:id="@+id/updatePlace"
+        android:layout_width="260dp"
+        android:layout_height="50dp"
+        android:background="@drawable/style_edittext"
+        android:hint="Update place"
+        android:padding="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/updateTitle"
+        android:layout_marginTop="10dp"/>
+    <EditText
+        android:id="@+id/updateDate"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:background="@drawable/style_edittext"
+        android:hint="Update date"
+        android:padding="10dp"
+        android:layout_alignLeft="@+id/updatePlace"
+        android:layout_below="@+id/updatePlace"
+        android:layout_marginTop="10dp"/>
+    <EditText
+        android:id="@+id/updateTime"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:background="@drawable/style_edittext"
+        android:hint="Update time"
+        android:padding="10dp"
+        android:layout_alignRight="@+id/updatePlace"
+        android:layout_below="@+id/updatePlace"
+        android:layout_marginTop="10dp"/>
+    <Button
+        android:id="@+id/updateBtn"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/updateDate"
+        android:layout_marginTop="10dp"
+        android:text="SAVE"
+        android:textColor="#ffff"
+        android:layout_marginBottom="20dp"
+        android:textStyle="bold"
+        android:background="@drawable/round_button"/>
+
+</RelativeLayout>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#ffff"
+
+
+
+    >
+
+    <ImageView
+        android:id="@+id/imageBack"
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:layout_centerHorizontal="true"
+
+        android:src="@drawable/mainactivitybackground" />
+
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageBack"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        app:cardElevation="2dp"
+        app:cardCornerRadius="15dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <ImageView
+                android:id="@+id/personLogo"
+                android:layout_width="40dp"
+                android:layout_height="55dp"
+                android:src="@drawable/userlogo"
+                android:layout_marginTop="4dp"
+                android:layout_alignLeft="@+id/scheduleTitle"
+                />
+
+            <TextView
+                android:id="@+id/welcomeTitle"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:text="Rishi"
+                android:layout_toRightOf="@+id/personLogo"
+                android:textSize="20dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:textColor="#424242"
+                android:fontFamily="@font/elegance"/>
+            <ImageView
+                android:id="@+id/logoutButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/viewSchedule"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="15dp"
+            android:src="@drawable/ic_logout" />
+        <EditText
+            android:id="@+id/scheduleTitle"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:hint="Enter Schedule Name"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/welcomeTitle"
+
+            android:background="@drawable/style_edittext"
+            android:padding="10dp"
+            />
+            <EditText
+                android:id="@+id/schedulePlace"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:hint="Enter Place"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/scheduleTitle"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/style_edittext"
+                android:padding="10dp"
+                />
+            <EditText
+                android:id="@+id/scheduleDate"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:hint="Date"
+                android:layout_alignLeft="@+id/schedulePlace"
+                android:layout_below="@+id/schedulePlace"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/style_edittext"
+                android:padding="10dp"
+                />
+            <EditText
+                android:id="@+id/scheduleTime"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:hint="Time"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/schedulePlace"
+                android:layout_toRightOf="@+id/scheduleDate"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/style_edittext"
+                android:padding="10dp"
+                />
+            <Button
+                android:id="@+id/submitSchedule"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:text="Submit"
+                android:textSize="14dp"
+                android:layout_below="@+id/scheduleDate"
+                android:layout_alignRight="@+id/scheduleTime"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/round_button"
+                android:textColor="#ffff"
+                android:onClick="checkDataValidation"
+                android:layout_marginBottom="15dp"/>
+
+            <Button
+                android:id="@+id/viewSchedule"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:text="Schedules"
+
+                android:textSize="14dp"
+                android:layout_below="@+id/scheduleDate"
+                android:layout_marginTop="20dp"
+                android:layout_alignLeft="@+id/scheduleDate"
+                android:background="@drawable/round_button"
+                android:textColor="#ffff"
+                android:onClick="viewSchedules"/>
+
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <me.ibrahimsn.lib.CirclesLoadingView
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        app:circleRadius="8dp"
+        app:circleMargin="8dp"
+        app:animDistance="10dp"
+        app:animDuration="500"
+        app:animDelay="150"
+        app:animInterpolator="accelerateDecelerate"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_below="@+id/cardView"
+        android:visibility="gone"/>
+
+
+
+
+
+
+</RelativeLayout>
