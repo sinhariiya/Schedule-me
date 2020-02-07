@@ -91,6 +91,7 @@ public class ViewSchedule extends AppCompatActivity {
 
 
     }
+    /* tHIS Will check for connectivity if not connected than it will show progressbar */
     public void checkConnectivity(){
         DatabaseReference connectedRef = FirebaseDatabase.getInstance().getReference(".info/connected");
        connectedRef.addValueEventListener(new ValueEventListener() {
