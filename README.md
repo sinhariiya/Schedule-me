@@ -9,7 +9,7 @@ Features Available
 Features not available
 
 1. Curently a user can't change his/her password.
-2. User can edit his/her profile details like Name, email
+2. User can't edit his/her profile details like Name, email
 
 Feel free to contribute resolve possible bugs.
 Thanks....
